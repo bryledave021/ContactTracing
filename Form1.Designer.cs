@@ -40,20 +40,24 @@ namespace Contact_Tracing
             this.label5 = new System.Windows.Forms.Label();
             this.txtbx_BDate = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Radbtn_Male_Gndr = new System.Windows.Forms.RadioButton();
-            this.Radbtn_Female_Gndr = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.txtbx_Address = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Radbtn_No_Q1 = new System.Windows.Forms.RadioButton();
-            this.Radbtn_Yes_Q1 = new System.Windows.Forms.RadioButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.Radbtn_No_Q2 = new System.Windows.Forms.RadioButton();
-            this.Radbtn_Yes_Q2 = new System.Windows.Forms.RadioButton();
+            this.lbl_Q1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtbx_ContactNo = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtbx_Email = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CmbBox_Q1 = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.CmbBox_Q2 = new System.Windows.Forms.ComboBox();
+            this.lbl_Q2 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.CmbBox_Gender = new System.Windows.Forms.ComboBox();
+            this.btn_Submit = new System.Windows.Forms.Button();
+            this.btn_View = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtbx_FName
@@ -62,6 +66,7 @@ namespace Contact_Tracing
             this.txtbx_FName.Name = "txtbx_FName";
             this.txtbx_FName.Size = new System.Drawing.Size(113, 23);
             this.txtbx_FName.TabIndex = 0;
+            this.txtbx_FName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbx_FName_KeyPress);
             // 
             // label1
             // 
@@ -87,6 +92,7 @@ namespace Contact_Tracing
             this.txtbx_MName.Name = "txtbx_MName";
             this.txtbx_MName.Size = new System.Drawing.Size(113, 23);
             this.txtbx_MName.TabIndex = 2;
+            this.txtbx_MName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbx_MName_KeyPress);
             // 
             // label3
             // 
@@ -103,13 +109,16 @@ namespace Contact_Tracing
             this.txtbx_LName.Name = "txtbx_LName";
             this.txtbx_LName.Size = new System.Drawing.Size(113, 23);
             this.txtbx_LName.TabIndex = 4;
+            this.txtbx_LName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbx_LName_KeyPress);
             // 
             // txtbx_Age
             // 
             this.txtbx_Age.Location = new System.Drawing.Point(175, 48);
+            this.txtbx_Age.MaxLength = 2;
             this.txtbx_Age.Name = "txtbx_Age";
             this.txtbx_Age.Size = new System.Drawing.Size(51, 23);
             this.txtbx_Age.TabIndex = 6;
+            this.txtbx_Age.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbx_Age_KeyPress);
             // 
             // label4
             // 
@@ -146,28 +155,6 @@ namespace Contact_Tracing
             this.label6.TabIndex = 11;
             this.label6.Text = "Gender:";
             // 
-            // Radbtn_Male_Gndr
-            // 
-            this.Radbtn_Male_Gndr.AutoSize = true;
-            this.Radbtn_Male_Gndr.Location = new System.Drawing.Point(178, 152);
-            this.Radbtn_Male_Gndr.Name = "Radbtn_Male_Gndr";
-            this.Radbtn_Male_Gndr.Size = new System.Drawing.Size(51, 19);
-            this.Radbtn_Male_Gndr.TabIndex = 12;
-            this.Radbtn_Male_Gndr.TabStop = true;
-            this.Radbtn_Male_Gndr.Text = "Male";
-            this.Radbtn_Male_Gndr.UseVisualStyleBackColor = true;
-            // 
-            // Radbtn_Female_Gndr
-            // 
-            this.Radbtn_Female_Gndr.AutoSize = true;
-            this.Radbtn_Female_Gndr.Location = new System.Drawing.Point(235, 152);
-            this.Radbtn_Female_Gndr.Name = "Radbtn_Female_Gndr";
-            this.Radbtn_Female_Gndr.Size = new System.Drawing.Size(63, 19);
-            this.Radbtn_Female_Gndr.TabIndex = 13;
-            this.Radbtn_Female_Gndr.TabStop = true;
-            this.Radbtn_Female_Gndr.Text = "Female";
-            this.Radbtn_Female_Gndr.UseVisualStyleBackColor = true;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -184,83 +171,32 @@ namespace Contact_Tracing
             this.txtbx_Address.Size = new System.Drawing.Size(286, 23);
             this.txtbx_Address.TabIndex = 14;
             // 
-            // label8
+            // lbl_Q1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 297);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(299, 15);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Do you have a fever, cough, or cold in the past 14 days?";
-            // 
-            // Radbtn_No_Q1
-            // 
-            this.Radbtn_No_Q1.AutoSize = true;
-            this.Radbtn_No_Q1.Location = new System.Drawing.Point(69, 315);
-            this.Radbtn_No_Q1.Name = "Radbtn_No_Q1";
-            this.Radbtn_No_Q1.Size = new System.Drawing.Size(41, 19);
-            this.Radbtn_No_Q1.TabIndex = 18;
-            this.Radbtn_No_Q1.TabStop = true;
-            this.Radbtn_No_Q1.Text = "No";
-            this.Radbtn_No_Q1.UseVisualStyleBackColor = true;
-            // 
-            // Radbtn_Yes_Q1
-            // 
-            this.Radbtn_Yes_Q1.AutoSize = true;
-            this.Radbtn_Yes_Q1.Location = new System.Drawing.Point(12, 315);
-            this.Radbtn_Yes_Q1.Name = "Radbtn_Yes_Q1";
-            this.Radbtn_Yes_Q1.Size = new System.Drawing.Size(42, 19);
-            this.Radbtn_Yes_Q1.TabIndex = 17;
-            this.Radbtn_Yes_Q1.TabStop = true;
-            this.Radbtn_Yes_Q1.Text = "Yes";
-            this.Radbtn_Yes_Q1.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 347);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(247, 15);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Are you diagnosed with CoVid-19 in the past?";
-            // 
-            // Radbtn_No_Q2
-            // 
-            this.Radbtn_No_Q2.AutoSize = true;
-            this.Radbtn_No_Q2.Location = new System.Drawing.Point(69, 375);
-            this.Radbtn_No_Q2.Name = "Radbtn_No_Q2";
-            this.Radbtn_No_Q2.Size = new System.Drawing.Size(41, 19);
-            this.Radbtn_No_Q2.TabIndex = 21;
-            this.Radbtn_No_Q2.TabStop = true;
-            this.Radbtn_No_Q2.Text = "No";
-            this.Radbtn_No_Q2.UseVisualStyleBackColor = true;
-            // 
-            // Radbtn_Yes_Q2
-            // 
-            this.Radbtn_Yes_Q2.AutoSize = true;
-            this.Radbtn_Yes_Q2.Location = new System.Drawing.Point(12, 375);
-            this.Radbtn_Yes_Q2.Name = "Radbtn_Yes_Q2";
-            this.Radbtn_Yes_Q2.Size = new System.Drawing.Size(42, 19);
-            this.Radbtn_Yes_Q2.TabIndex = 20;
-            this.Radbtn_Yes_Q2.TabStop = true;
-            this.Radbtn_Yes_Q2.Text = "Yes";
-            this.Radbtn_Yes_Q2.UseVisualStyleBackColor = true;
+            this.lbl_Q1.AutoSize = true;
+            this.lbl_Q1.Location = new System.Drawing.Point(6, 19);
+            this.lbl_Q1.Name = "lbl_Q1";
+            this.lbl_Q1.Size = new System.Drawing.Size(299, 15);
+            this.lbl_Q1.TabIndex = 16;
+            this.lbl_Q1.Text = "Do you have a fever, cough, or cold in the past 14 days?";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(12, 241);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 15);
+            this.label10.Size = new System.Drawing.Size(66, 15);
             this.label10.TabIndex = 23;
-            this.label10.Text = "Contact No.:";
+            this.label10.Text = "Phone No.:";
             // 
             // txtbx_ContactNo
             // 
             this.txtbx_ContactNo.Location = new System.Drawing.Point(12, 259);
+            this.txtbx_ContactNo.MaxLength = 11;
             this.txtbx_ContactNo.Name = "txtbx_ContactNo";
             this.txtbx_ContactNo.Size = new System.Drawing.Size(98, 23);
             this.txtbx_ContactNo.TabIndex = 22;
+            this.txtbx_ContactNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbx_ContactNo_KeyPress);
             // 
             // label11
             // 
@@ -278,25 +214,118 @@ namespace Contact_Tracing
             this.txtbx_Email.Size = new System.Drawing.Size(173, 23);
             this.txtbx_Email.TabIndex = 24;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.CmbBox_Q1);
+            this.groupBox1.Controls.Add(this.lbl_Q1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 288);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(314, 70);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Question";
+            // 
+            // CmbBox_Q1
+            // 
+            this.CmbBox_Q1.FormattingEnabled = true;
+            this.CmbBox_Q1.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.CmbBox_Q1.Location = new System.Drawing.Point(6, 37);
+            this.CmbBox_Q1.Name = "CmbBox_Q1";
+            this.CmbBox_Q1.Size = new System.Drawing.Size(76, 23);
+            this.CmbBox_Q1.TabIndex = 29;
+            this.CmbBox_Q1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbBox_Q1_KeyPress);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.CmbBox_Q2);
+            this.groupBox2.Controls.Add(this.lbl_Q2);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Location = new System.Drawing.Point(12, 359);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(314, 70);
+            this.groupBox2.TabIndex = 27;
+            this.groupBox2.TabStop = false;
+            // 
+            // CmbBox_Q2
+            // 
+            this.CmbBox_Q2.FormattingEnabled = true;
+            this.CmbBox_Q2.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.CmbBox_Q2.Location = new System.Drawing.Point(6, 37);
+            this.CmbBox_Q2.Name = "CmbBox_Q2";
+            this.CmbBox_Q2.Size = new System.Drawing.Size(76, 23);
+            this.CmbBox_Q2.TabIndex = 30;
+            this.CmbBox_Q2.SelectedIndexChanged += new System.EventHandler(this.CmbBox_Q2_SelectedIndexChanged);
+            this.CmbBox_Q2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbBox_Q2_KeyPress);
+            // 
+            // lbl_Q2
+            // 
+            this.lbl_Q2.AutoSize = true;
+            this.lbl_Q2.Location = new System.Drawing.Point(6, 19);
+            this.lbl_Q2.Name = "lbl_Q2";
+            this.lbl_Q2.Size = new System.Drawing.Size(247, 15);
+            this.lbl_Q2.TabIndex = 22;
+            this.lbl_Q2.Text = "Are you diagnosed with CoVid-19 in the past?";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 19);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 15);
+            this.label12.TabIndex = 16;
+            // 
+            // CmbBox_Gender
+            // 
+            this.CmbBox_Gender.FormattingEnabled = true;
+            this.CmbBox_Gender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.CmbBox_Gender.Location = new System.Drawing.Point(177, 152);
+            this.CmbBox_Gender.Name = "CmbBox_Gender";
+            this.CmbBox_Gender.Size = new System.Drawing.Size(121, 23);
+            this.CmbBox_Gender.TabIndex = 28;
+            this.CmbBox_Gender.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbBox_Gender_KeyPress);
+            // 
+            // btn_Submit
+            // 
+            this.btn_Submit.Location = new System.Drawing.Point(77, 435);
+            this.btn_Submit.Name = "btn_Submit";
+            this.btn_Submit.Size = new System.Drawing.Size(75, 23);
+            this.btn_Submit.TabIndex = 29;
+            this.btn_Submit.Text = "Submit";
+            this.btn_Submit.UseVisualStyleBackColor = true;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
+            // 
+            // btn_View
+            // 
+            this.btn_View.Location = new System.Drawing.Point(175, 435);
+            this.btn_View.Name = "btn_View";
+            this.btn_View.Size = new System.Drawing.Size(75, 23);
+            this.btn_View.TabIndex = 30;
+            this.btn_View.Text = "View";
+            this.btn_View.UseVisualStyleBackColor = true;
+            this.btn_View.Click += new System.EventHandler(this.btn_View_Click);
+            // 
             // ContactTracingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 398);
+            this.ClientSize = new System.Drawing.Size(342, 468);
+            this.Controls.Add(this.btn_View);
+            this.Controls.Add(this.btn_Submit);
+            this.Controls.Add(this.CmbBox_Gender);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtbx_Email);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtbx_ContactNo);
-            this.Controls.Add(this.Radbtn_No_Q2);
-            this.Controls.Add(this.Radbtn_Yes_Q2);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.Radbtn_No_Q1);
-            this.Controls.Add(this.Radbtn_Yes_Q1);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtbx_Address);
-            this.Controls.Add(this.Radbtn_Female_Gndr);
-            this.Controls.Add(this.Radbtn_Male_Gndr);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtbx_BDate);
@@ -310,6 +339,10 @@ namespace Contact_Tracing
             this.Controls.Add(this.txtbx_FName);
             this.Name = "ContactTracingForm";
             this.Text = "Covid Contact Tracing";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,20 +361,22 @@ namespace Contact_Tracing
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtbx_BDate;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton Radbtn_Male_Gndr;
-        private System.Windows.Forms.RadioButton Radbtn_Female_Gndr;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtbx_Address;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton Radbtn_No_Q1;
-        private System.Windows.Forms.RadioButton Radbtn_Yes_Q1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton Radbtn_No_Q2;
-        private System.Windows.Forms.RadioButton Radbtn_Yes_Q2;
+        private System.Windows.Forms.Label lbl_Q1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtbx_ContactNo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtbx_Email;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lbl_Q2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox CmbBox_Q1;
+        private System.Windows.Forms.ComboBox CmbBox_Q2;
+        private System.Windows.Forms.ComboBox CmbBox_Gender;
+        private System.Windows.Forms.Button btn_Submit;
+        private System.Windows.Forms.Button btn_View;
     }
 }
 

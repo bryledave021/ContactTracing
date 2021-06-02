@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.IO;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace Contact_Tracing
+{
+    public partial class ViewCT : Form
+    {
+        public ViewCT()
+        {
+            InitializeComponent();
+        }
+
+        private void ViewCT_Load(object sender, EventArgs e)
+        {
+            string CTPath = @"ContactTracing.txt";
+            string CTShow = File.ReadAllText(CTPath);
+            CTViewer.Text = CTShow;
+            }
+        }
+    }
+
