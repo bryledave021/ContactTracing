@@ -22,6 +22,18 @@ namespace Contact_Tracing
             string CTShow = File.ReadAllText(CTPath);
             CTViewer.Text = CTShow;
             }
+
+        private void btn_GoBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ContactTracingForm CT = new ContactTracingForm();
+            CT.Show();
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
     }
 

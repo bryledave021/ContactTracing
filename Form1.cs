@@ -90,10 +90,11 @@ namespace Contact_Tracing
             ContactTracing.WriteLine("Home Address:" + txtbx_Address.Text);
             ContactTracing.WriteLine(lbl_Q1.Text + " " + CmbBox_Q1.Text);
             ContactTracing.WriteLine(lbl_Q2.Text + " " + CmbBox_Q2.Text);
+            ContactTracing.WriteLine(lbl_Q3.Text + " " + CmbBox_Q3.Text);
             ContactTracing.WriteLine("|---------------------------------------------|");
             ContactTracing.WriteLine();
             ContactTracing.Close();
-            MessageBox.Show("Your Response has been submitted. Thank you!");
+            MessageBox.Show("Your Response has been submitted. Thank you!", "Contact Tracing" ,MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtbx_Address.Clear();
             txtbx_Age.Clear();
             txtbx_BDate.Clear();
@@ -105,10 +106,21 @@ namespace Contact_Tracing
             CmbBox_Gender.Text= "";
             CmbBox_Q1.Text = "";
             CmbBox_Q2.Text = "";
+            CmbBox_Q3.Text = "";
 
 
 
 
+        }
+
+        private void CmbBox_Q3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

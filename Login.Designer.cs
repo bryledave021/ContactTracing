@@ -34,12 +34,13 @@ namespace Contact_Tracing
             this.txtBx_Username = new System.Windows.Forms.TextBox();
             this.txtBx_Pass = new System.Windows.Forms.TextBox();
             this.btn_Login = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 49);
+            this.label1.Location = new System.Drawing.Point(24, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 15);
             this.label1.TabIndex = 0;
@@ -48,7 +49,7 @@ namespace Contact_Tracing
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 81);
+            this.label2.Location = new System.Drawing.Point(24, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 15);
             this.label2.TabIndex = 1;
@@ -56,14 +57,14 @@ namespace Contact_Tracing
             // 
             // txtBx_Username
             // 
-            this.txtBx_Username.Location = new System.Drawing.Point(81, 46);
+            this.txtBx_Username.Location = new System.Drawing.Point(93, 53);
             this.txtBx_Username.Name = "txtBx_Username";
             this.txtBx_Username.Size = new System.Drawing.Size(100, 23);
             this.txtBx_Username.TabIndex = 2;
             // 
             // txtBx_Pass
             // 
-            this.txtBx_Pass.Location = new System.Drawing.Point(81, 75);
+            this.txtBx_Pass.Location = new System.Drawing.Point(93, 82);
             this.txtBx_Pass.MaxLength = 14;
             this.txtBx_Pass.Name = "txtBx_Pass";
             this.txtBx_Pass.PasswordChar = '*';
@@ -73,7 +74,7 @@ namespace Contact_Tracing
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(90, 119);
+            this.btn_Login.Location = new System.Drawing.Point(105, 125);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(75, 23);
             this.btn_Login.TabIndex = 4;
@@ -81,17 +82,32 @@ namespace Contact_Tracing
             this.btn_Login.UseVisualStyleBackColor = true;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(-1, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(275, 29);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Admin Only";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(193, 167);
+            this.ClientSize = new System.Drawing.Size(270, 162);
+            this.ControlBox = false;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.txtBx_Pass);
             this.Controls.Add(this.txtBx_Username);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log in";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -105,5 +121,6 @@ namespace Contact_Tracing
         private System.Windows.Forms.TextBox txtBx_Username;
         private System.Windows.Forms.TextBox txtBx_Pass;
         private System.Windows.Forms.Button btn_Login;
+        private System.Windows.Forms.Label label3;
     }
 }

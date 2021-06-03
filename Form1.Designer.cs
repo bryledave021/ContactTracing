@@ -56,8 +56,14 @@ namespace Contact_Tracing
             this.CmbBox_Gender = new System.Windows.Forms.ComboBox();
             this.btn_Submit = new System.Windows.Forms.Button();
             this.btn_View = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.CmbBox_Q3 = new System.Windows.Forms.ComboBox();
+            this.lbl_Q3 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtbx_FName
@@ -80,7 +86,7 @@ namespace Contact_Tracing
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 82);
+            this.label2.Location = new System.Drawing.Point(140, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 15);
             this.label2.TabIndex = 3;
@@ -88,7 +94,7 @@ namespace Contact_Tracing
             // 
             // txtbx_MName
             // 
-            this.txtbx_MName.Location = new System.Drawing.Point(12, 100);
+            this.txtbx_MName.Location = new System.Drawing.Point(140, 48);
             this.txtbx_MName.Name = "txtbx_MName";
             this.txtbx_MName.Size = new System.Drawing.Size(113, 23);
             this.txtbx_MName.TabIndex = 2;
@@ -97,7 +103,7 @@ namespace Contact_Tracing
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 134);
+            this.label3.Location = new System.Drawing.Point(269, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 15);
             this.label3.TabIndex = 5;
@@ -105,7 +111,7 @@ namespace Contact_Tracing
             // 
             // txtbx_LName
             // 
-            this.txtbx_LName.Location = new System.Drawing.Point(12, 152);
+            this.txtbx_LName.Location = new System.Drawing.Point(269, 48);
             this.txtbx_LName.Name = "txtbx_LName";
             this.txtbx_LName.Size = new System.Drawing.Size(113, 23);
             this.txtbx_LName.TabIndex = 4;
@@ -113,7 +119,7 @@ namespace Contact_Tracing
             // 
             // txtbx_Age
             // 
-            this.txtbx_Age.Location = new System.Drawing.Point(175, 48);
+            this.txtbx_Age.Location = new System.Drawing.Point(140, 100);
             this.txtbx_Age.MaxLength = 2;
             this.txtbx_Age.Name = "txtbx_Age";
             this.txtbx_Age.Size = new System.Drawing.Size(51, 23);
@@ -123,7 +129,7 @@ namespace Contact_Tracing
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(175, 30);
+            this.label4.Location = new System.Drawing.Point(140, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 15);
             this.label4.TabIndex = 7;
@@ -133,7 +139,7 @@ namespace Contact_Tracing
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(175, 82);
+            this.label5.Location = new System.Drawing.Point(12, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 15);
             this.label5.TabIndex = 9;
@@ -141,15 +147,15 @@ namespace Contact_Tracing
             // 
             // txtbx_BDate
             // 
-            this.txtbx_BDate.Location = new System.Drawing.Point(175, 100);
+            this.txtbx_BDate.Location = new System.Drawing.Point(12, 100);
             this.txtbx_BDate.Name = "txtbx_BDate";
-            this.txtbx_BDate.Size = new System.Drawing.Size(123, 23);
+            this.txtbx_BDate.Size = new System.Drawing.Size(113, 23);
             this.txtbx_BDate.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(175, 134);
+            this.label6.Location = new System.Drawing.Point(12, 134);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 15);
             this.label6.TabIndex = 11;
@@ -158,7 +164,7 @@ namespace Contact_Tracing
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 187);
+            this.label7.Location = new System.Drawing.Point(14, 188);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 15);
             this.label7.TabIndex = 15;
@@ -166,9 +172,9 @@ namespace Contact_Tracing
             // 
             // txtbx_Address
             // 
-            this.txtbx_Address.Location = new System.Drawing.Point(12, 205);
+            this.txtbx_Address.Location = new System.Drawing.Point(14, 206);
             this.txtbx_Address.Name = "txtbx_Address";
-            this.txtbx_Address.Size = new System.Drawing.Size(286, 23);
+            this.txtbx_Address.Size = new System.Drawing.Size(252, 23);
             this.txtbx_Address.TabIndex = 14;
             // 
             // lbl_Q1
@@ -183,7 +189,7 @@ namespace Contact_Tracing
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 241);
+            this.label10.Location = new System.Drawing.Point(200, 82);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(66, 15);
             this.label10.TabIndex = 23;
@@ -191,7 +197,7 @@ namespace Contact_Tracing
             // 
             // txtbx_ContactNo
             // 
-            this.txtbx_ContactNo.Location = new System.Drawing.Point(12, 259);
+            this.txtbx_ContactNo.Location = new System.Drawing.Point(200, 100);
             this.txtbx_ContactNo.MaxLength = 11;
             this.txtbx_ContactNo.Name = "txtbx_ContactNo";
             this.txtbx_ContactNo.Size = new System.Drawing.Size(98, 23);
@@ -201,7 +207,7 @@ namespace Contact_Tracing
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(125, 241);
+            this.label11.Location = new System.Drawing.Point(140, 134);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 15);
             this.label11.TabIndex = 25;
@@ -209,16 +215,17 @@ namespace Contact_Tracing
             // 
             // txtbx_Email
             // 
-            this.txtbx_Email.Location = new System.Drawing.Point(125, 259);
+            this.txtbx_Email.Location = new System.Drawing.Point(140, 152);
             this.txtbx_Email.Name = "txtbx_Email";
-            this.txtbx_Email.Size = new System.Drawing.Size(173, 23);
+            this.txtbx_Email.Size = new System.Drawing.Size(126, 23);
             this.txtbx_Email.TabIndex = 24;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox1.Controls.Add(this.CmbBox_Q1);
             this.groupBox1.Controls.Add(this.lbl_Q1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 288);
+            this.groupBox1.Location = new System.Drawing.Point(12, 244);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(314, 70);
             this.groupBox1.TabIndex = 26;
@@ -242,7 +249,7 @@ namespace Contact_Tracing
             this.groupBox2.Controls.Add(this.CmbBox_Q2);
             this.groupBox2.Controls.Add(this.lbl_Q2);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Location = new System.Drawing.Point(12, 359);
+            this.groupBox2.Location = new System.Drawing.Point(12, 320);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(314, 70);
             this.groupBox2.TabIndex = 27;
@@ -264,7 +271,7 @@ namespace Contact_Tracing
             // lbl_Q2
             // 
             this.lbl_Q2.AutoSize = true;
-            this.lbl_Q2.Location = new System.Drawing.Point(6, 19);
+            this.lbl_Q2.Location = new System.Drawing.Point(12, 19);
             this.lbl_Q2.Name = "lbl_Q2";
             this.lbl_Q2.Size = new System.Drawing.Size(247, 15);
             this.lbl_Q2.TabIndex = 22;
@@ -284,15 +291,15 @@ namespace Contact_Tracing
             this.CmbBox_Gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.CmbBox_Gender.Location = new System.Drawing.Point(177, 152);
+            this.CmbBox_Gender.Location = new System.Drawing.Point(14, 152);
             this.CmbBox_Gender.Name = "CmbBox_Gender";
-            this.CmbBox_Gender.Size = new System.Drawing.Size(121, 23);
+            this.CmbBox_Gender.Size = new System.Drawing.Size(111, 23);
             this.CmbBox_Gender.TabIndex = 28;
             this.CmbBox_Gender.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbBox_Gender_KeyPress);
             // 
             // btn_Submit
             // 
-            this.btn_Submit.Location = new System.Drawing.Point(77, 435);
+            this.btn_Submit.Location = new System.Drawing.Point(80, 487);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(75, 23);
             this.btn_Submit.TabIndex = 29;
@@ -302,7 +309,7 @@ namespace Contact_Tracing
             // 
             // btn_View
             // 
-            this.btn_View.Location = new System.Drawing.Point(175, 435);
+            this.btn_View.Location = new System.Drawing.Point(161, 487);
             this.btn_View.Name = "btn_View";
             this.btn_View.Size = new System.Drawing.Size(75, 23);
             this.btn_View.TabIndex = 30;
@@ -310,11 +317,65 @@ namespace Contact_Tracing
             this.btn_View.UseVisualStyleBackColor = true;
             this.btn_View.Click += new System.EventHandler(this.btn_View_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.CmbBox_Q3);
+            this.groupBox3.Controls.Add(this.lbl_Q3);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Location = new System.Drawing.Point(12, 396);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(314, 85);
+            this.groupBox3.TabIndex = 31;
+            this.groupBox3.TabStop = false;
+            // 
+            // CmbBox_Q3
+            // 
+            this.CmbBox_Q3.FormattingEnabled = true;
+            this.CmbBox_Q3.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.CmbBox_Q3.Location = new System.Drawing.Point(6, 52);
+            this.CmbBox_Q3.Name = "CmbBox_Q3";
+            this.CmbBox_Q3.Size = new System.Drawing.Size(76, 23);
+            this.CmbBox_Q3.TabIndex = 30;
+            this.CmbBox_Q3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbBox_Q3_KeyPress);
+            // 
+            // lbl_Q3
+            // 
+            this.lbl_Q3.AutoSize = true;
+            this.lbl_Q3.Location = new System.Drawing.Point(12, 19);
+            this.lbl_Q3.Name = "lbl_Q3";
+            this.lbl_Q3.Size = new System.Drawing.Size(276, 30);
+            this.lbl_Q3.TabIndex = 22;
+            this.lbl_Q3.Text = "Have you travelled outside the country/NCR in the \r\npast 14 days?";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 19);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 15);
+            this.label9.TabIndex = 16;
+            // 
+            // btn_Exit
+            // 
+            this.btn_Exit.Location = new System.Drawing.Point(242, 487);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(75, 23);
+            this.btn_Exit.TabIndex = 32;
+            this.btn_Exit.Text = "Exit";
+            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            // 
             // ContactTracingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 468);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(396, 522);
+            this.ControlBox = false;
+            this.Controls.Add(this.btn_Exit);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btn_View);
             this.Controls.Add(this.btn_Submit);
             this.Controls.Add(this.CmbBox_Gender);
@@ -338,11 +399,14 @@ namespace Contact_Tracing
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbx_FName);
             this.Name = "ContactTracingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Covid Contact Tracing";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,6 +441,11 @@ namespace Contact_Tracing
         private System.Windows.Forms.ComboBox CmbBox_Gender;
         private System.Windows.Forms.Button btn_Submit;
         private System.Windows.Forms.Button btn_View;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox CmbBox_Q3;
+        private System.Windows.Forms.Label lbl_Q3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btn_Exit;
     }
 }
 

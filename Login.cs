@@ -29,7 +29,7 @@ namespace Contact_Tracing
                 CT.Show();
             }
             else {
-                MessageBox.Show("You Entered a wrong username or password!");
+                MessageBox.Show("You Entered a wrong username or password!", "Administator", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtBx_Username.Clear();
                 txtBx_Pass.Clear();
                     }

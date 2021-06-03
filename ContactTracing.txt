@@ -1,22 +1,13 @@
-Name: Bryle Alivio Martinez
+Name: Bryle Dave Alivio  Martinez
 Birth Date: December 21, 2001
 Age: 19 years old
 Gender: Male
 Phone No.: 09495805491
 E-Mail: brylemartinez021@gmail.com
-Home Address:77 MLQ st. Taguig
+Home Address:77 M. L. Q. St. New Lower Bicutan, Taguig City
 Do you have a fever, cough, or cold in the past 14 days? No
 Are you diagnosed with CoVid-19 in the past? No
-|---------------------------------------------|
-
-Name: Kimberly Badal  Ultra
-Birth Date: March 14, 2001
-Age: 20 years old
-Gender: Female
-Phone No.: 09457183566
-E-Mail: kim.badal@yahoo.com
-Home Address:Brgy. San Miguel Taguig CIty
-Do you have a fever, cough, or cold in the past 14 days? No
-Are you diagnosed with CoVid-19 in the past? No
+Have you travelled outside the country/NCR in the 
+past 14 days? No
 |---------------------------------------------|
 
